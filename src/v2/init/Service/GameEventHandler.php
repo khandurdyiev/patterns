@@ -9,6 +9,7 @@ use Se\Patterns\v2\init\Model\RewardInterface;
 use Se\Patterns\v2\init\Model\SignupReward;
 use Se\Patterns\v2\init\Model\PurchaseReward;
 use Se\Patterns\v2\init\Model\LevelCompletedReward;
+use Se\Patterns\v2\init\Model\TenLevelCompletedReward;
 
 class GameEventHandler
 {
@@ -30,10 +31,10 @@ class GameEventHandler
 
         if ($rewardPolicy === 'levelbased_purchase') {
             if ($playerLevel >= 10) {
-                return new LevelCompletedReward();
+                return new TenLevelCompletedReward();
             }
 
-            return new PurchaseReward();
+            return new LevelCompletedReward();
         }
 
         throw new \InvalidArgumentException("Unknown reward policy: {$rewardPolicy}");

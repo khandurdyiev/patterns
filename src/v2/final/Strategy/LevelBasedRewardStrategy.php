@@ -8,6 +8,7 @@ use Se\Patterns\v2\final\Model\Player;
 use Se\Patterns\v2\final\Model\RewardInterface;
 use Se\Patterns\v2\final\Model\PurchaseReward;
 use Se\Patterns\v2\final\Model\LevelCompletedReward;
+use Se\Patterns\v2\final\Model\TenLevelCompletedReward;
 
 class LevelBasedRewardStrategy implements RewardIssuingStrategyInterface
 {
@@ -18,9 +19,9 @@ class LevelBasedRewardStrategy implements RewardIssuingStrategyInterface
     public function createReward(Player $player): ?RewardInterface
     {
         if ($this->playerLevel >= 10) {
-            return new LevelCompletedReward();
+            return new TenLevelCompletedReward();
         }
 
-        return new PurchaseReward();
+        return new LevelCompletedReward();
     }
 }

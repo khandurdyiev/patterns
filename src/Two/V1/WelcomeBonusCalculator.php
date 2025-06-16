@@ -4,8 +4,8 @@ namespace Se\Patterns\Two\V1;
 
 class WelcomeBonusCalculator extends BonusCalculator
 {
-    protected function createBonus(): Bonus
+    protected function createBonus(): BonusPoints
     {
-        return new WelcomeBonus();
+        return new WelcomeBonusPoints();
     }
 }

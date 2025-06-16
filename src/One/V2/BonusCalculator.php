@@ -4,8 +4,6 @@ namespace Se\Patterns\One\V2;
 
 abstract class BonusCalculator
 {
-    abstract protected function createBonus(): Bonus;
-
     public function awardPoints(User $user): void
     {
         $bonus = $this->createBonus();
@@ -16,4 +14,6 @@ abstract class BonusCalculator
 
         echo "User '{$user->getName()}' has been awarded {$points} points. Reason: {$description}\n";
     }
+
+    abstract protected function createBonus(): BonusPoints;
 }

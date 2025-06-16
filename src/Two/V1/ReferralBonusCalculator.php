@@ -4,8 +4,8 @@ namespace Se\Patterns\Two\V1;
 
 class ReferralBonusCalculator extends BonusCalculator
 {
-    protected function createBonus(): Bonus
+    protected function createBonus(): BonusPoints
     {
-        return new ReferralBonus();
+        return new ReferralBonusPoints();
     }
 }

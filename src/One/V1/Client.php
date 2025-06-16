@@ -11,15 +11,15 @@ class Client
         $user = new User("Valerii");
         echo "Initial Balance: {$user->getPointsBalance()}\n\n";
 
-        $bonusManager = new BonusManager();
+        $bonusCalculator = new BonusCalculator();
 
-        // Нараховуємо бали за реєстрацію
-        $bonusManager->awardPoints($user, 'welcome');
-        echo "Баланс після реєстрації: {$user->getPointsBalance()}\n\n";
+        // Granting points for a registration
+        $bonusCalculator->awardPoints($user, 'welcome');
+        echo "Total: {$user->getPointsBalance()}\n\n";
 
-        // Нараховуємо бали за покупку
-        $bonusManager->awardPoints($user, 'first_purchase');
-        echo "Баланс після покупки: {$user->getPointsBalance()}\n";
+        // Granting points for a purchase
+        $bonusCalculator->awardPoints($user, 'first_purchase');
+        echo "Total: {$user->getPointsBalance()}\n\n";
     }
 }
 

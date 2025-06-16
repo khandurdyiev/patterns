@@ -1,0 +1,11 @@
+<?php
+
+namespace Se\Patterns\Four\V1;
+
+class FirstPurchaseBonusFactory extends BonusFactory
+{
+    public function createBonus(): BonusPoints
+    {
+        return new FirstPurchaseBonusPoints();
+    }
+}

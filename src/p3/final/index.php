@@ -14,7 +14,7 @@ use Se\Patterns\p3\final\ThirdParty\UnitySDK;
 use Se\Patterns\p3\final\ThirdParty\UnrealSDK;
 use Se\Patterns\p3\final\ThirdParty\WebSDK;
 
-$player = new Player(1, 'John Doe');
+$player = new Player(1, 'Islam');
 $reward = new SignupReward();
 
 // Unity client

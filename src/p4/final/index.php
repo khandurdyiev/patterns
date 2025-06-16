@@ -19,5 +19,5 @@ $purchaseHandler->setNext($genericHandler);
 $handler = new GameEventHandler($purchaseHandler);
 
 // Run
-$player = new Player(1, 'Іслам');
+$player = new Player(1, 'Islam');
 $handler->handle($player);

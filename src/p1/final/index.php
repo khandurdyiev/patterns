@@ -7,7 +7,7 @@ require_once __DIR__ . '/../../../vendor/autoload.php';
 use Se\Patterns\p1\final\Model\Player;
 use Se\Patterns\p1\final\Service\GameEventHandler;
 
-$player = new Player(1, 'John Doe');
+$player = new Player(1, 'Islam');
 $handler = new GameEventHandler();
 
 $handler->handle('signup', $player);

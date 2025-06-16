@@ -12,7 +12,7 @@ use Se\Patterns\p2\final\Model\SignupReward;
 use Se\Patterns\p2\final\Model\PurchaseReward;
 use Se\Patterns\p2\final\Model\LevelCompletedReward;
 
-$player = new Player(1, 'John Doe');
+$player = new Player(1, 'Islam');
 
 // Fixed strategy → SignupReward
 $handler = new GameEventHandler();

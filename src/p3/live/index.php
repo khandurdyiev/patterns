@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
-use Se\Patterns\p3\init\Model\Player;
-use Se\Patterns\p3\init\Model\SignupReward;
-use Se\Patterns\p3\init\Service\GameEventHandler;
+use Se\Patterns\p3\live\Model\Player;
+use Se\Patterns\p3\live\Model\SignupReward;
+use Se\Patterns\p3\live\Service\GameEventHandler;
 
 $player = new Player(1, 'Islam');
 $handler = new GameEventHandler();

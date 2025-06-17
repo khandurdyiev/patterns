@@ -8,7 +8,8 @@ class Player
 {
     public function __construct(
         private readonly int $id,
-        private string $name
+        private string $name,
+        private int $level = 1,
     ) {}
 
     public function getId(): int
@@ -19,5 +20,15 @@ class Player
     public function getName(): string
     {
         return $this->name;
+    }
+
+    public function getLevel(): int
+    {
+        return $this->level;
+    }
+
+    public function setLevel(int $level): void
+    {
+        $this->level = $level;
     }
 }

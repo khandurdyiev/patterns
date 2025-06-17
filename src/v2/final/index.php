@@ -24,8 +24,8 @@ $handler->setStrategy(new FixedRewardStrategy(new PurchaseReward()));
 $handler->handle($player);
 
 // Level based strategy
-$handler->setStrategy(new LevelBasedRewardStrategy(5));
+$handler->setStrategy(new LevelBasedRewardStrategy());
 $handler->handle($player);
 
-$handler->setStrategy(new LevelBasedRewardStrategy(15));
+$player->setLevel(15);
 $handler->handle($player);

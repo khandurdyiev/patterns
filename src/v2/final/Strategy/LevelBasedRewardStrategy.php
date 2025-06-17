@@ -13,12 +13,11 @@ use Se\Patterns\v2\final\Model\TenLevelCompletedReward;
 class LevelBasedRewardStrategy implements RewardIssuingStrategyInterface
 {
     public function __construct(
-        private readonly int $playerLevel
     ) {}
 
     public function createReward(Player $player): ?RewardInterface
     {
-        if ($this->playerLevel >= 10) {
+        if ($player->getLevel() >= 10) {
             return new TenLevelCompletedReward();
         }
 

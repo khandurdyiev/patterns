@@ -14,7 +14,7 @@ readonly class AprilBonusServiceProxy implements BonusServiceInterface
 
     public function awardPoints(User $user, BonusFactory $bonusFactory): void
     {
-        if (date('m-d') === '06-16') {
+        if (date('m-d') === '06-17') {
             echo "April joke!\n";
             return;
         }

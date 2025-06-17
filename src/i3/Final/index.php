@@ -2,6 +2,7 @@
 
 namespace Se\Patterns\i3\Final;
 
+use Se\Patterns\i3\Final\Decorator\BonusServiceDecorator;
 use Se\Patterns\i3\Final\Decorator\LoggingBonusServiceDecorator;
 use Se\Patterns\i3\Final\Factory\FirstPurchaseBonusFactory;
 use Se\Patterns\i3\Final\Factory\ReferralBonusFactory;
@@ -15,7 +16,7 @@ require_once __DIR__ . '/../../../vendor/autoload.php';
 $user = new User("Valerii");
 echo "Initial Balance: {$user->getPointsBalance()}\n\n";
 
-$bonusService = new BonusService();
+$bonusService = new BonusServiceDecorator(new BonusService());
 $loggingBonusService = new LoggingBonusServiceDecorator(new Logger(), $bonusService);
 
 // Granting points for a registration
